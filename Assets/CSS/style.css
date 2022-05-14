@@ -1,0 +1,137 @@
+.grid-container {
+  display: grid;
+  grid-template-areas: "cont-nav-bar cont-nav-bar " "cont-side-bar cont-productos" "cont-footer cont-footer";
+  grid-template-columns: 37% 63%;
+  background-color: antiquewhite;
+}
+
+.cont-nav-bar {
+  grid-area: cont-nav-bar;
+  color: white;
+  background-color: #25527b;
+  text-align: center;
+  height: 15vh;
+}
+
+.principal {
+  text-align: center;
+  text-decoration: overline;
+  font-size: 40px;
+  font-family: "Koulen", cursive;
+}
+.form-texto {
+  text-align: center;
+  font-family: "Koulen", cursive;
+}
+
+.cont-side-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: #b4b5b6;
+}
+
+.menu {
+  list-style: none;
+  text-align: left;
+}
+
+.form-texto-li {
+  font-family: "Koulen", cursive;
+}
+
+.cont-gen-productos {
+  display: grid;
+  grid-area: cont-productos;
+  grid-template-columns: auto;
+  background-color: white;
+  gap: 2vh;
+  margin-top: 2vh;
+  margin-block-end: 2vh;
+}
+
+.cont-card-producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 85%;
+  border: #25527b solid;
+  background-color: white;
+}
+
+.for-img {
+  width: 80%;
+  height: 80%;
+}
+
+.button {
+  margin: 3% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25527b;
+  width: 98%;
+  height: 3em;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+.formato-boton {
+  font-family: "Koulen", cursive;
+  font-size: medium;
+}
+.button:hover {
+  cursor: pointer;
+  background: rgb(197, 10, 10);
+  font-size: 1.04em;
+  border: 2px solid #000;
+}
+
+.cont-footer {
+  grid-area: cont-footer;
+  color: white;
+  background-color: #25527b;
+  text-align: center;
+  height: 15vh;
+}
+
+@media (min-width: 600px) and (max-width: 990px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas: "cont-nav-bar cont-nav-bar " "cont-side-bar cont-productos" "cont-footer cont-footer";
+    grid-template-columns: 20% 80%;
+    background-color: white;
+  }
+
+  .cont-gen-productos {
+    display: grid;
+    grid-area: cont-productos;
+    background-color: white;
+    grid-template-columns: auto auto;
+    gap: 2vh;
+    margin-top: 2vh;
+    margin-block-end: 2vh;
+  }
+}
+
+@media (min-width: 991px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas: "cont-nav-bar cont-nav-bar " "cont-side-bar cont-productos" "cont-footer cont-footer";
+    grid-template-columns: 20% 80%;
+    background-color: white;
+  }
+
+  .cont-gen-productos {
+    display: grid;
+    grid-area: cont-productos;
+    background-color: white;
+    grid-template-columns: auto auto auto;
+    gap: 2vh;
+    margin-top: 2vh;
+    margin-block-end: 2vh;
+  }
+}
